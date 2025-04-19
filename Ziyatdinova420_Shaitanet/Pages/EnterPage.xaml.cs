@@ -12,19 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Ziyatdinova420_Shaitanet.Pages;
 
-namespace Ziyatdinova420_Shaitanet
+namespace Ziyatdinova420_Shaitanet.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для EnterPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EnterPage : Page
     {
-        public MainWindow()
+        public EnterPage()
         {
             InitializeComponent();
-            MainContentFrame.Navigate(new EnterPage());
+        }
+
+        private void EnterBTN_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new FeedPage());
         }
     }
 }

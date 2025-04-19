@@ -49,7 +49,26 @@ namespace Ziyatdinova420_Shaitanet.Pages
 
         private void AddBTN_Click(object sender, RoutedEventArgs e)
         {
+            NavigationService.Navigate(new AddFeedPage());
+        }
 
+        private void EditFeedBTN_Click(object sender, RoutedEventArgs e)
+        {
+            if (FeedLV.SelectedIndex != -1)
+            {
+                var selecFeed = (Feed)FeedLV.SelectedItem;
+                EditFeedPage editPage = new EditFeedPage(selecFeed);
+                NavigationService.Navigate(editPage);
+            }
+            else
+            {
+                MessageBox.Show("Вы не выбрали корм для изменения");
+            }
+        }
+
+        private void SearchTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            FeedLV.ItemsSource = new List<Feed>(DBConnection.Shaitanet_420Entities.Feed.Where(x => x.Name.StartsWith(SearchTB.Text)));
         }
     }
 }

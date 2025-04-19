@@ -23,11 +23,11 @@
 
 
         <TextBlock Text="Шайтане" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="15"/>
-
+        <TextBox x:Name="SearchTB" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Height="45" Background="Lavender" TextChanged="SearchTB_TextChanged"></TextBox>
         <Button x:Name="CollapseBTN" Content="Свернуть" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="350,0,0,0" Width="150" Height="45" Background="Violet" Click="CollapseBTN_Click" Grid.Column="1"/>
         <Button x:Name="CloseBTN" Content="Закрыть" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="510,0,0,0" Width="150" Height="45" Background="Violet" Click="CloseBTN_Click" Grid.ColumnSpan="2" Grid.Column="1"/>
 
-        <TextBox x:Name="SearchTB" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Width="150" Height="45" Background="Lavender"></TextBox>
+       
 
         <Button x:Name="FeedBTN" Content="Корма" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="150" Height="45" Background="Violet" Click="FeedBTN_Click"></Button>
         <Button x:Name="ExitBTN" Content="Выход" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="150" Height="45" Background="Violet" Margin="0 60 0 0" Click="ExitBTN_Click"></Button>
@@ -65,5 +65,6 @@
                 </ListView.ItemsPanel>
             </ListView>
         </StackPanel>
+        <Button x:Name="EditFeedBTN" Grid.Column="1" Grid.Row="2" Width="200" Height="45" Content="Изменить" Background="Violet" FontSize="15" Click="EditFeedBTN_Click"></Button>
     </Grid>
 </Page>

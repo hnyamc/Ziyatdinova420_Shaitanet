@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Ziyatdinova420_Shaitanet.DB;
 
 namespace Ziyatdinova420_Shaitanet.Pages
 {
@@ -23,6 +24,32 @@ namespace Ziyatdinova420_Shaitanet.Pages
         public FeedPage()
         {
             InitializeComponent();
+            FeedLV.ItemsSource = DBConnection.Shaitanet_420Entities.Feed.ToList();
+        }
+
+        private void CollapseBTN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CloseBTN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FeedBTN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ExitBTN_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new EnterPage());
+        }
+
+        private void AddBTN_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
